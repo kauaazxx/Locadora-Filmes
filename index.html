@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Locadora - Cadastro de Filmes</title>
+</head>
+
+<body>
+
+<header>
+<h1>Cadastro de Filmes</h1>
+<button onclick="abrirModal()">+ Novo Filme</button>
+</header>
+
+<main>
+
+<div class="filtro">
+<label>Filtrar por gênero:</label>
+
+<select id="filtroGenero" onchange="filtrarGenero()">
+<option value="todos">Todos</option>
+<option value="Ação">Ação</option>
+<option value="Comédia">Comédia</option>
+<option value="Terror">Terror</option>
+<option value="Drama">Drama</option>
+<option value="Romance">Romance</option>
+<option value="Ficção">Ficção</option>
+</select>
+</div>
+
+<table>
+
+<thead>
+<tr>
+<th>Capa</th>
+<th>Título</th>
+<th>Produtora</th>
+<th>Gênero</th>
+<th>Classificação</th>
+<th>Ano</th>
+<th>Ações</th>
+</tr>
+</thead>
+
+<tbody id="dados"></tbody>
+
+</table>
+
+</main>
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<h2>Novo Filme</h2>
+
+<input type="text" id="capa" placeholder="URL da Imagem da Capa">
+
+<input type="text" id="titulo" placeholder="Título do Filme">
+
+<input type="text" id="produtora" placeholder="Produtora">
+
+<input type="text" id="genero" placeholder="Gênero">
+
+<input type="number" id="classificacao" placeholder="Classificação de idade">
+
+<input type="number" id="ano" placeholder="Ano de Lançamento">
+
+<div class="modal-buttons">
+
+<button onclick="salvarFilme()">Salvar</button>
+
+<button onclick="fecharModal()">Cancelar</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

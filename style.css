@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #2d3436;
+    line-height: 1.6;
+}
+
+
+header {
+    background: rgb(255, 0, 0);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+}
+
+header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+button {
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    background: #4f46e5;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    padding: 12px;
+    color: #6b7280;
+}
+
+td {
+    background: rgb(155, 149, 149);
+    padding: 15px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+tr:hover td {
+    background: #72abe3;
+}
+
+
+
+td:first-child {
+    border-left: 1px solid #eee;
+    border-radius: 10px 0 0 10px;
+}
+
+td:last-child {
+    border-right: 1px solid #eee;
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* BOTÃO EXCLUIR */
+
+button[onclick*="removerFilme"] {
+    background: #ef4444;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+}
+
+button[onclick*="removerFilme"]:hover {
+    background: #dc2626;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-content h2 {
+    font-size: 1.4rem;
+}
+
+input {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4f46e5;
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+filtro{
+    margin-bottom:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.filtro select{
+    padding:8px 12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
